@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Recyclerview" parent="Base.Theme.Recyclerview" />
+
+    <!-- Adiciona o estilo customizado para bordas arredondadas -->
+    <style name="RoundedImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
