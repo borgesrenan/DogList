@@ -38,14 +38,6 @@ class MainActivity : AppCompatActivity() {
         //Aqui a lista e submetida
         adapter.submitList(dogs)
 
-        //Teste
-        ivGrid.setOnClickListener {
-            rvList.layoutManager = GridLayoutManager(this, 2)
-        }
-
-        ivList.setOnClickListener {
-            rvList.layoutManager = LinearLayoutManager(this)
-        }
     }
 }
 
