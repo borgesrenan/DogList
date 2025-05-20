@@ -1,10 +1,12 @@
 package com.devspace.recyclerview
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -27,12 +29,15 @@ class MainActivity : AppCompatActivity() {
 
         val rvList = findViewById<RecyclerView>(R.id.rv_list)
         val adapter = DogsListAdapter()
+        val ivList = findViewById<ImageView>(R.id.iv_list)
+        val ivGrid = findViewById<ImageView>(R.id.iv_grid)
 
         rvList.adapter = adapter
         //Ordem que os items serao mostrados
         rvList.layoutManager = LinearLayoutManager(this)
         //Aqui a lista e submetida
         adapter.submitList(dogs)
+
     }
 }
 
