@@ -29,13 +29,34 @@ class DogDetailActivity : AppCompatActivity() {
         val tvName = findViewById<TextView>(R.id.tv_name)
         val tvBreed = findViewById<TextView>(R.id.tv_breed)
         val image = findViewById<ImageView>(R.id.image)
+        val tvAge = findViewById<TextView>(R.id.tv_age)
+        val tvWeight = findViewById<TextView>(R.id.tv_weight)
+        val tvGender = findViewById<TextView>(R.id.tv_gender)
+        val tvVaccine = findViewById<TextView>(R.id.tv_vaccine)
+        val tvGoodKids = findViewById<TextView>(R.id.tv_kids)
+        val tvGoodDogs = findViewById<TextView>(R.id.tv_dog)
+        val tvBio = findViewById<TextView>(R.id.tv_bio)
 
         val name = intent.getStringExtra("name")
         val breed = intent.getStringExtra("breed")
+        val age = intent.getStringExtra("age")
+        val weight = intent.getStringExtra("weight")
+        val gender = intent.getStringExtra("gender")
+        val vaccine = intent.getStringExtra("vaccine")
+        val goodKids = intent.getStringExtra("goodKids")
+        val goodDogs = intent.getStringExtra("goodKids")
+        val bio = intent.getStringExtra("bio")
         val icon = intent.getIntExtra("icon", R.drawable.cocker)
 
         tvName.text = name
         tvBreed.text = breed
+        tvAge.text = age
+        tvWeight.text = weight
+        tvGender.text = gender
+        tvVaccine.text = vaccine
+        tvGoodDogs.text = goodDogs
+        tvGoodKids.text = goodKids
+        tvBio.text = bio
         image.setImageResource(icon)
 
         val heartIcon = findViewById<ImageView>(R.id.img_favorite)

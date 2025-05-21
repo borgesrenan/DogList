@@ -103,14 +103,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                tools:text="BIO:" />
+                android:text="BIO:" />
 
             <TextView
+                android:id="@+id/tv_bio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Marley is a gentle and affectionate dog who thrives on\nhuman connection. He’s calm indoors, enjoys lounging beside you while you work or relax" />
+                android:textSize="16sp"
+                android:text="Marley is a gentle and affectionate dog who thrives onhuman connection. He’s calm indoors, enjoys lounging beside you while you work or relax" />
 
             <LinearLayout
                 android:id="@+id/ln_age"
@@ -125,16 +127,15 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="Age:" />
+                    android:text="Age:" />
 
                 <TextView
                     android:id="@+id/tv_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:text="3 years old" />
-
 
             </LinearLayout>
 
@@ -151,14 +152,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="Gender:" />
+                    android:text="Gender:" />
 
                 <TextView
                     android:id="@+id/tv_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:text="Male" />
 
 
@@ -177,14 +178,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="Weight:" />
+                    android:text="Weight:" />
 
                 <TextView
                     android:id="@+id/tv_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:text="12 KG" />
 
 
@@ -201,16 +202,15 @@
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="Vaccinated:" />
+                    android:text="Vaccinated:" />
 
                 <TextView
                     android:id="@+id/tv_vaccine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:text="YES" />
-
 
             </LinearLayout>
 
@@ -227,14 +227,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="Good with Kids:" />
+                    android:text="Good with Kids:" />
 
                 <TextView
                     android:id="@+id/tv_kids"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:text="YES" />
 
                 <!-- Espaço -->
@@ -249,13 +249,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="Good with other Dogs:" />
+                    android:text="Good with other Dogs:" />
 
                 <TextView
                     android:id="@+id/tv_dog"
+                    android:layout_marginStart="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     tools:text="YES" />
 
             </LinearLayout>
