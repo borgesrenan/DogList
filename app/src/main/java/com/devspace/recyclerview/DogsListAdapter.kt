@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 class DogsListAdapter :
     ListAdapter<Dogs, DogsListAdapter.DogViewHolder>(DogDiffUtils()) {
 
+    private lateinit var onClickListener: (Dogs) -> Unit
+
     //Criar um view holder
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -28,20 +30,28 @@ class DogsListAdapter :
         position: Int
     ) {
         val dog = getItem(position)
-        holder.bind(dog)
+        holder.bind(dog, onClickListener)
+    }
+
+    fun setOnClickListener(onClick: (Dogs) -> Unit) {
+        onClickListener = onClick
     }
 
 
     //View holder = view que segura os dados
-    class DogViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class DogViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         private val tvName = view.findViewById<TextView>(R.id.tv_name)
         private val tvBreed = view.findViewById<TextView>(R.id.tv_breed)
         private val image = view.findViewById<ImageView>(R.id.image)
 
-        fun bind(dogs: Dogs) {
+        fun bind(dogs: Dogs, onClick: (Dogs) -> Unit) {
             tvName.text = dogs.name
             tvBreed.text = dogs.breed
             image.setImageResource(dogs.icon)
+
+            view.setOnClickListener {
+                onClick.invoke(dogs)
+            }
         }
 
     }
