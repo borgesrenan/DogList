@@ -1,6 +1,8 @@
 package com.devspace.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -44,6 +46,15 @@ class MainActivity : AppCompatActivity() {
 
         ivList.setOnClickListener {
             rvList.layoutManager = LinearLayoutManager(this)
+        }
+
+        adapter.setOnClickListener { dogs ->
+            val intent = Intent(this, DogDetailActivity::class.java)
+            //Passando os valores para a proxima tela
+            intent.putExtra("name", dogs.name)
+            intent.putExtra("breed", dogs.breed)
+            intent.putExtra("icon", dogs.icon)
+            startActivity(intent)
         }
 
     }
