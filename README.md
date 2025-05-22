@@ -17,3 +17,4 @@ Esse aplicativo foi desenvolvido para praticar o uso de listas no desenvolviment
 - Layout Manager: Grid and Linear
 - DiffUtils
 - Explicit intent
+- Material CardView
